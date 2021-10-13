@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Lim Scooters</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <!-- prima di iniziare dal capo della pagina, ho già diviso tutto in sezioni tramite tag semantici guardando l'insieme della pagina-->
+  <body>
+  <!-- per ottenere un riquadro simile all'immagine, racchiudiamo l'intero body in un div che possiamo plasmare a nostro piacimento in css e ordinerà tutti gli elementi figli-->
+    <div class="bigbox">
+    <!--notiamo che c'è contorno; inscriviamo tutti i contenuti di header e main in un'ulteriore "scatola" che ci permetterà una formattazione esteticamente piacevole-->
+      <div class="smallbox">
+        <header>
+        <!--occupandoci del capo pagina, non ha senso spostare un elemento alla volta man mano, ci conviene invece muovere un padre che contiene tutti i figli da traslare verso il basso-->
+            <!--inseriamo l'immagine in un div e centriamola utilizzando display:flex-->
+            <div class="logo">
+              <img class="icon" src="img/logolime.png">
+            </div>
+            <!--facciamo in modo che il titolone si trovi sotto il logo grazie al tag <div> che è un level-block element mentre <img> un inline-->
+            <div class="title">
+              <h1> Taking Booleaners from A to B</h1>
+            </div>
+        </header>
+          <!-- il menù di navigazione (div padre > 3 button) ho preferito separarlo all'interfaccia grafica <nav> per avere più facile manovrabilità-->
+          <nav>
+            <div class="menu">
+              <button> Prenota </button>
+              <button> Termina Prenotazione</button>
+              <button> Accendi Luci </button>
+            </div>
+          </nav>
+          <br>
+          <main>
+            <!--tramite la classe article ho stabilito delle regole comuni agli elementi delle 3 sezioni di <main> (e non solo)-->
+            <div class="articletext">
+            <!--abbiamo già visto che dobbiamo aggiungere 3 sezioni molto simili e quindi le delineamo subito, ogni section conterrà:-->
+              <section1>
+                <!--un div "scatola" per formattare il testo-->
+                <div>
+                <!--un title id che definisce le regole dei 3 titoli "fratelli" contenenti checkbox e nome monopattino;-->
+                  <div id="title">
+                    <input type="checkbox">
+                    <span>Monopattino Paolo22</span>
+                  </div>
+                  <!--un text id con i paragrafi informativi-->
+                  <div id="text">
+                    <span class="arrow"> Via Vattelapesca - a 222 metri da te</span>
+                    <br>
+                    <span>Stato carica:</span>
+                  </div>
+                </div>
+                <!--una barra di carica fuori dal div scatola poiché unica-->
+                <div id="bartotal">
+                  <div class="bar1">
+                  </div>
+                </div>
+              </section1>
+              <br>
+              <section2>
+                <div>
+                  <div id="title">
+                    <input type="checkbox">
+                    <span>Monopattino Luca96</span>
+                  </div>
+                  <div id="text">
+                    <span class="arrow"> Via Della Moldava - a 96 metri da te</span>
+                    <br>
+                    <span>Stato carica:</span>
+                  </div>
+                </div>
+                <div id="bartotal">
+                  <div class="bar2">
+                  </div>
+                </div>
+              </section2>
+              <br>
+              <section3>
+                <div>
+                  <div id="title">
+                    <input type="checkbox">
+                    <span>Monopattino Giovanni420</span>
+                  </div>
+                  <div id="text">
+                    <span class="arrow"> Via Fuoco - a 420 metri da te</span>
+                    <br>
+                    <span>Stato carica:</span>
+                  </div>
+                </div>
+                <div id="bartotal">
+                  <div class="bar3">
+                  </div>
+                </div>
+              </section3>
+            </div>
+          </main>
+            <!--pur non essendo presenti dei crediti nell'immagine assegnata, aggiungo di mia sponte un piccolo footer per rendere la pagina più completa-->
+          <hr id="hl"></hr>
+        <footer>
+          <div class="logo">
+            <!--qui ho sfruttato le regole di formattazione testo definite prima per non appesantire la sintassi di css-->
+            <span id="text" class="articletext"> - - ^Powered by Boolean!^ - -</span>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>
